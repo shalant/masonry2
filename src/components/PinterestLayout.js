@@ -1,11 +1,20 @@
 import React from 'react';
 import '../styles.css';
 import Pin from './Pin';
+import DW from '../images/DW.jpg';
+
+const images = [
+    {   key: 1,
+        img: DW
+    }
+]
 
 const PinterestLayout = () => {
     return (
         <div style={styles.pin_container}>
-            <Pin size='small'/>
+            <Pin size='small' img={images[0]} classname='dw' />
+                {/* <img src='../images/DW.jpg' /> */}
+            
             <Pin size='medium'/>
             <Pin size='small'/>
             <Pin size='medium'/>

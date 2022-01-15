@@ -1,11 +1,18 @@
 import React from 'react';
+import DW from '../images/DW.jpg';
+
 
 const Pin = (props) => {
     return (
-        <div style={{
-            ...styles.pin,
-            ...styles[props.size]
-        }} >
+        <div 
+            style={{
+                ...styles.pin,
+                ...styles[props.size]
+            }}
+            image={{
+                ...images[props.key]
+            }}
+        >
         </div>
     )
 }
@@ -15,7 +22,7 @@ const styles = {
         margin: '15px 10px',
         padding: 0,
         borderRadius: '16px',
-        backgroundColor: 'red'
+        backgroundColor: 'green'
     },
     small: {
         gridRowEnd: 'span 26'
@@ -28,5 +35,10 @@ const styles = {
     }
 }
 
+const images = [
+    {   key: 1,
+        img: DW
+    }
+]
 
 export default Pin;
